@@ -70,6 +70,8 @@ TEMPLATES = [
     },
 ]
 
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
 WSGI_APPLICATION = 'to_do_list.wsgi.application'
 
 
