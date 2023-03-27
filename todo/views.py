@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 
 from todo.forms import TaskForm
-from todo.models import Task
+from todo.models import Task, Tag
 
 
 def index(request):
@@ -18,3 +18,8 @@ class TaskCreateView(generic.CreateView):
     model = Task
     form_class = TaskForm
     template_name = "to_do_list/task_form.html"
+
+
+class TagListView(generic.ListView):
+    model = Tag
+    template_name = "to_do_list/tags.html"
