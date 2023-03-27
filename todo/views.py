@@ -20,6 +20,13 @@ class TaskCreateView(generic.CreateView):
     template_name = "to_do_list/task_form.html"
 
 
+class TaskUpdateView(generic.UpdateView):
+    model = Task
+    form_class = TaskForm
+    template_name = "to_do_list/task_form.html"
+
+
+
 class TagListView(generic.ListView):
     model = Tag
     template_name = "to_do_list/tags.html"
