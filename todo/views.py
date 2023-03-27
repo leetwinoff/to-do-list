@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 
-from todo.forms import TaskForm
+from todo.forms import TaskForm, TagForm
 from todo.models import Task, Tag
 
 
@@ -26,7 +26,12 @@ class TaskUpdateView(generic.UpdateView):
     template_name = "to_do_list/task_form.html"
 
 
-
 class TagListView(generic.ListView):
     model = Tag
     template_name = "to_do_list/tags.html"
+
+
+class TagCreateView(generic.CreateView):
+    model = Tag
+    form_class = TagForm
+    template_name = "to_do_list/tag_form.html"
