@@ -9,7 +9,7 @@ from todo.models import Task, Tag
 class TaskListView(generic.ListView):
     model = Task
     template_name = "to_do_list/index.html"
-    ordering = ["is_done"]
+    ordering = ["is_done", "created_at"]
 
 
 class TaskCreateView(generic.CreateView):
@@ -28,6 +28,7 @@ class TaskUpdateView(generic.UpdateView):
 
 class TaskDeleteView(generic.DeleteView):
     model = Task
+    template_name = "to_do_list/confirm_task_delete.html"
     success_url = reverse_lazy("todo:task-list")
 
 
