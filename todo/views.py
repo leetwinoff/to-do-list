@@ -6,10 +6,6 @@ from todo.forms import TaskForm, TagForm
 from todo.models import Task, Tag
 
 
-def index(request):
-    return render(request, "to_do_list/index.html")
-
-
 class TaskListView(generic.ListView):
     model = Task
     template_name = "to_do_list/tasks.html"
@@ -38,6 +34,13 @@ class TagListView(generic.ListView):
 
 
 class TagCreateView(generic.CreateView):
+    model = Tag
+    form_class = TagForm
+    template_name = "to_do_list/tag_form.html"
+    success_url = reverse_lazy("todo:tags-list")
+
+
+class TagUpdateView(generic.UpdateView):
     model = Tag
     form_class = TagForm
     template_name = "to_do_list/tag_form.html"
