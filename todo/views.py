@@ -9,6 +9,7 @@ from todo.models import Task, Tag
 class TaskListView(generic.ListView):
     model = Task
     template_name = "to_do_list/index.html"
+    ordering = ["is_done"]
 
 
 class TaskCreateView(generic.CreateView):
