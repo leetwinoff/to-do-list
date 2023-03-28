@@ -45,3 +45,8 @@ class TagUpdateView(generic.UpdateView):
     form_class = TagForm
     template_name = "to_do_list/tag_form.html"
     success_url = reverse_lazy("todo:tags-list")
+
+
+class TagDeleteView(generic.DeleteView):
+    model = Tag
+    success_url = reverse_lazy("todo:tags-list")
