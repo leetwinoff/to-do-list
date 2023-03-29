@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container" style="margin-top: 50px">
+  <h1 style="text-align: center">Tags List</h1>
+  <hr>
+    {% for tag in tag_list %}
+      <table class="table table-striped">
+        <td><h2>{{ tag.name }}</h2></td>
+        <td><a href="{% url "todo:tag-update" pk=tag.id %}">Update</a></td>
+        <td><a href="{% url "todo:tag-delete" pk=tag.id %}">Delete</a></td>
+      </table>
+      <hr>
+    {% endfor %}
+  </div>
+
+{% endblock %}

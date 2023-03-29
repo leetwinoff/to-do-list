@@ -1,0 +1,1 @@
+DJANGO_SECRET_KEY = "dgf-gw4q4+lsn(jaaw@=lv*v(j2%v-ae&$+q!#j7%@qglm^gy1"
