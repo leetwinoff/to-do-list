@@ -1,8 +1,6 @@
 import os
 from pathlib import Path
 
-from secret_key import DJANGO_SECRET_KEY
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -13,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = DJANGO_SECRET_KEY
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "kr0apa)2v^)2u7p=p2_ddb56uom+$cgophqk47w_8dc#z-g-sn")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
