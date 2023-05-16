@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -11,7 +10,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "kr0apa)2v^)2u7p=p2_ddb56uom+$cgophqk47w_8dc#z-g-sn")
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "yoz%+2jo+lb044bw2v-z63wup(%!9l($a3*#$jezxu0$$=8ihu")
+
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
